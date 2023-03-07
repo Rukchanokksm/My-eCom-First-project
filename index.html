@@ -12,12 +12,14 @@
 </head>
 <body>
     <!--top navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Offcanvas navbar large" style="height: 8vh;font-weight: 500;">
-        <div class="container-fluid px-5">
-          <a class="navbar-brand fs-5 text-uppercase" href="#">bootstrap templet</a>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Offcanvas navbar large" style="height: 10vh; font-weight: 500;">
+        <div class="container-fluid px-5">      
+            <a href="#"><img src="/image/logo-free.jpg" alt="logo-nav" style="max-width: 80px; width: 100%;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!--Drop down-->
           <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
@@ -26,22 +28,40 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active fs-3" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <button class="btn text-info position-relative">
+                    <i class="bi bi-cart3 fs-2"></i>
+                    <span class="position-absolute fs-5 bg-danger border-dark text-center" style="width: 30px; border-radius: 100%; top: -2px; right:-8px;">8</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="btn text-info position-relative">
+                    <i class="bi bi-heart fs-2"></i>
+                    <span class="position-absolute fs-5 bg-danger border-dark text-center" style="width: 30px; border-radius: 100%; top: -2px; right:-8px;">9+</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="btn text-info position-relative">
+                    <i class="bi bi-chat-square fs-2"></i>
+                    <span class="position-absolute fs-5 bg-danger border-dark text-center" style="width: 30px; border-radius: 100%; top: -2px; right:-8px;">2</span>
+                  </button>
                 </li>
                 <li class="nav-item dropdown position-relative">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                  <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    login
                   </a>
                   <ul class="dropdown-menu ">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">profile</a></li>
+                    <li><a class="dropdown-item" href="#">product</a></li>
+                    <li><a class="dropdown-item" href="#">Buy</a></li>
+                    <li><a class="dropdown-item" href="#">address</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Something </a></li>
+                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                    <li><a class="dropdown-item" href="#">logout</a></li>
                   </ul>
                 </li>
               </ul>          
@@ -51,12 +71,12 @@
       </nav>
       <!--image slide-->
       <section>
-        <div class="containerimg" style="height: 92vh; max-width: 200vh;">
-            <div class="slideimg text-center d-inline-flex container-fluid">
-            <img  src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover" style="height: 132vh; width: 100%;  object-position :70% 70%;">
-            <img  src="/image/sl-img2.jpg" alt="image-product" class="img-fluid object-fit-cover" style="height: 151vh; width: 100%;  object-position :50% 50%;">
-            <img  src="/image/sl-img3.jpg" alt="image-product" class="img-fluid object-fit-cover" style="height: 132vh; width: 100%;  object-position :40% 40%;">
-            <img  src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover" style="height: 132vh; width: 100%;  object-position :70% 70%;">
+        <div class="containerimg" style="max-height: 92vh; height: 100%; max-width: 200vh; width: 100%;">
+            <div class="slideimg text-center d-inline-flex">
+            <img  src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :70% 70%;">
+            <img  src="/image/sl-img2.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :50% 50%;">
+            <img  src="/image/sl-img3.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :40% 40%;">
+            <img  src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :70% 70%;">
       
             
           </div>
@@ -100,14 +120,21 @@
                   </div>
                   
                 </div>
-              </div>
-              
+              </div>  
             <!--Contant rigth-->
               <div class="col-xl-10 text-center p-0 container-fluid">
                 <div class="row mx-0">
                   <!-- card product 01-->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/srtm012.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="height: 100%;">
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/srt215.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                      455$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -117,9 +144,18 @@
                       </a>    
                     </div>
                   </div>
+
                   <!-- card product 02-->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/cap01.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="height: 100%;">
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/srt556.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                      455$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -129,9 +165,18 @@
                       </a>    
                     </div>
                   </div>
-                  <!-- card product -->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/srt556.jpg" class="card-img-top border rounded-2 img-fluid object-fit-fill" alt="Hdm#225" style="height: 100%;">
+
+                  <!-- card product 01-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/cap01.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                     1850$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -141,9 +186,18 @@
                       </a>    
                     </div>
                   </div>
-                  <!-- card product -->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/srt215.jpg" class="card-img-top border rounded-2 img-fluid object-fit-fill" alt="Hdm#225" style="height: 100%;">
+
+                  <!-- card product 04-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/cap02.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                      <s>480$</s> 455$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -153,9 +207,18 @@
                       </a>    
                     </div>
                   </div>
-                  <!-- card product -->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/srt89.jpg" class="card-img-top border rounded-2 img-fluid object-fit-fill" alt="Hdm#225" style="height: 100%;">
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/oeiiw6.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -165,9 +228,18 @@
                       </a>    
                     </div>
                   </div>
-                  <!-- card product -->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/hdm225.jpg" class="card-img-top border rounded-2 img-fluid object-fit-fill" alt="Hdm#225" style="height: 100%;">
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/srtm012.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -177,9 +249,18 @@
                       </a>    
                     </div>
                   </div>
-                  <!-- card product -->
-                  <div class="container col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative" style=" height: 360px;">
-                    <img src="/image/cap02.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="height: 100%;">
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/sdpq668.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
                     <div class="position-absolute bottom-0 mx-2 mb-2">
                       <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
@@ -189,25 +270,202 @@
                       </a>    
                     </div>
                   </div>
-               
-                
-                
-                  
-                  
-                  <div class="container  col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  <div class="container col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  <div class="container border rounded-1 col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  <div class="container border rounded-1 col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  <div class="container border rounded-1 col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  <div class="container border rounded-1 col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  <div class="container border rounded-1 col-6  col-md-4 col-xl-3 mx-0" style=" height: 360px;"></div>
-                  
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/utie3.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/srt89.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/med833.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/syj65.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/weqwe77.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/ts7239.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/lui65.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/mds996.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+
+                  <!-- card product 05-->
+                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
+                    <a href="#">
+                      <img src="/image/tit96.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
+                    </a>
+                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
+                    </button>
+                    <p class="price-product">
+                    455$
+                    </p>
+                    <div class="position-absolute bottom-0 mx-2 mb-2">
+                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                        Add to chart
+                      </a>
+                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                        <i class="bi bi-cart3 me-1 fs-4 "></i>
+                      </a>    
+                    </div>
+                  </div>
+    
                 </div>
               </div>
               </div>    
       </section>
 
-      <!--Footer content -->
+     <!--Footer content -->
       <section class="container-fluid bg-dark">
           <footer class="row align-items-center text-center py-5 mx-5">
             <div class="col-sm-6 align-items-center d-flex text-white">
@@ -222,11 +480,9 @@
                 </li>
                 <li class="list-unstyled fs-3">
                   <a href="#"><i class="bi bi-twitter"></i></a>
-                
                 </li>
                 <li class="list-unstyled fs-3">
-                  <a href="#"><i class="bi bi-youtube"></i></a>
-                  
+                  <a href="#"><i class="bi bi-youtube"></i></a>   
                 </li>
               </ul>
             </div>

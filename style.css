@@ -12,6 +12,16 @@ h1 {
     font-weight: 700;
 }
 
+:root {
+    --navbarcolor:#272727;
+    --hoverheart:#FF4088;
+}
+
+
+/*Nav bar*/
+.navbar {
+  background-color: var(--navbarcolor);
+}
 
 /*slide image*/
 .containerimg{
@@ -70,5 +80,27 @@ h1 {
 }
 
 
+/*button heat*/
+.button-heart i{
+  color: #FCADCB;
+}
+.button-heart i:hover{
+  color: var(--hoverheart);
+  transition: all 0.5s;
+}
 
+/*price-product*/
+.price-product{
+  position: absolute;
+  color: #101010;
+  background-color: #78FABD;
+  top: 10px;
+  left:5%;
+  width: 60px;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+
+/*footer*/
 
