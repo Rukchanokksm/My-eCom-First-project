@@ -135,11 +135,11 @@
                     <p class="price-product">
                       455$
                     </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
+                    <div class="position-absolute bottom-0 mx-2 mb-2"  onclick="openPopUp()">
+                      <button href="" class="btn btn-primary d-none d-md-block d-lg-block">
                         Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
+                      </button>
+                      <a class="btn btn-primary d-block d-md-none d-lg-none">
                         <i class="bi bi-cart3 me-1 fs-4 "></i>
                       </a>    
                     </div>
@@ -464,16 +464,18 @@
               </div>    
       </section>
 
-      <!--alart item-->
-      <section class="alart-item container text-center justify-content-center mx-auto start-50 translate-middle">
+      <!--popup item-->
+      <section class="alart-item container text-center justify-content-center mx-auto start-50 translate-middle" id="popup">
         <div class="popup-product row ">
-          <div class="col-md-6 p-5">
-              <p>product item</p>
-              <img src="/image/hdm225.jpg" alt="product" class="img-fluid object-fit-cover">
-              <p>supply <span>6</span></p>
+          <div class="col-md-6 p-5 text-center justify-content-center">
+              <p class="fs-3">Product item</p>
+              <div>
+                <img src="/image/hdm225.jpg" alt="product" class="img-fluid object-fit-cover" width="250" height="250">
+              </div>
+              <p class="fs-5">supply <span>6</span></p>
           </div>
-          <div class="col-md-6 bg-info p-5">
-              <p>detail item</p>
+          <div class="dtipu col-md-6 p-5">
+              <p class="fs-3">Detail item</p>
               <p class="text-start fs-3">hoodie male <span class="fs-5 text-danger">total sold 52</span></p>
               <div class="text-start d-flex fs-5">
                 <p class="">455 $</p>
@@ -485,9 +487,30 @@
                     <option value="Ningha">Ningha</option>
                   </select>
                 </div>
+              </div> 
+              <div class="row gap-1">
+                <div class="col text-start d-flex gap-1 "> 
+                    <button class="buttnchos btn text-light border-light" id="btnsplc1">S</button>
+                    <button class="buttnchos btn text-light border-light" id="btnsplc2">L</button>
+                    <button class="buttnchos btn text-light border-light" id="btnsplc3">M</button>
+                    <button class="buttnchos btn text-light border-light" id="btnsplc4">XL</button> 
+                </div>
+                <div class="col">
+                  <div class="bcp">
+                    <button class="btn">add to cart</button>
+                  </div>
+                </div>
+                <div class="col">
+                  <!--button close popup-->
+                  <div class="bcp">
+                    <button class="btn" onclick="ClosepopUp()">
+                      continue shopping
+                    </button>
+                  </div>
+                </div>
               </div>
-              
           </div>
+
         </div>
       </section>
 
@@ -564,12 +587,8 @@
 
       </section>
    
-
-   
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/app.js" type="text-js"></script>
+    <script src="/app.js"> </script>
 </body>
 </html>
 

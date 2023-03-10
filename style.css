@@ -16,6 +16,8 @@ h1 {
 :root {
     --navbarcolor:#272727;
     --hoverheart:#FF4088;
+    --buttoncolor:#F6224C;
+    --textcolor:#ECECEC;
 }
 
 
@@ -159,18 +161,64 @@ section.footer li i:hover {
 /*alart-item*/
 .alart-item {
   color: #101010;
-  top: 40vh;
+  top: 55%;
   z-index: 10;
   background-color: #EFEFEF;
   position: fixed;
-  display: inline;
+  visibility: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width:760px) {
-  .alart-item {
-    top: 52vh;
-  }
+  overflow: auto;
 }
 
 
+.dtipu {
+  background-color: #323232;
+}
+.dtipu p {
+  color: #EFEFEF;
+}
+
+/*add image*/
+/* .add-image {
+  background-image: url(/image/mds996.jpg);
+  display: inline-block;
+  max-width: 600px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+} */
+
+/*button close popup*/
+.bcp {
+  align-items: center;
+  justify-content: center;
+}
+.bcp button {
+  color: #FCADCB;
+  background-color: #272727;
+  width: 10rem;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.bcp button:hover {
+  background-color: var(--buttoncolor);
+}
+
+/* .btslsize button{
+  color: var(--textcolor);
+  font-weight: 600;
+  border-color: var(--textcolor);
+} */
+
+.buttnchos.clicked{
+  background-color: var(--buttoncolor);
+  color: var(--navbarcolor);
+}
+
+/*close popup*/
+
+.popupitem{
+  visibility: visible;
+}
