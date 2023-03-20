@@ -1,597 +1,1426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Shop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
+
 <body>
-    <!--top navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Offcanvas navbar large" style="height: 10vh; font-weight: 500;">
-        <div class="container-fluid px-5">      
-            <a href="#"><img src="/image/logo-free.jpg" alt="logo-nav" style="max-width: 80px; width: 100%;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!--top navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Offcanvas navbar large"
+    style="height: 10vh; font-weight: 500;">
+    <div class="container-fluid px-5">
+      <a href="#"><img src="/image/logo-free.jpg" alt="logo-nav" style="max-width: 80px; width: 100%;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+        aria-controls="offcanvasNavbar2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <!--Drop down-->
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <!--Drop down-->
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+        aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active fs-3" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-light position-relative">
+                <i class="bi bi-cart3 fs-2"></i>
+                <span class="position-absolute fs-5 bg-secondary border-dark text-center"
+                  style="width: 30px; border-radius: 100%; top: -2px; right:-8px;" id="countProduct">0</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn position-relative">
+                <i class="text-danger-emphasis bi bi-heart fs-2"></i>
+                <span class="position-absolute fs-5 bg-secondary border-dark text-center text-light"
+                  style="width: 30px; border-radius: 100%; top: -2px; right:-8px;" id="countLike">0</span>
+              </button>
+            </li>
+            <li class="nav-item dropdown position-relative">
+              <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                login
+              </a>
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="#">profile</a></li>
+                <li><a class="dropdown-item" href="#">product</a></li>
+                <li><a class="dropdown-item" href="#">Buy</a></li>
+                <li><a class="dropdown-item" href="#">address</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Setting</a></li>
+                <li><a class="dropdown-item" href="#">logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--image slide-->
+  <section>
+    <div class="containerimg" style="max-height: 92vh; height: 100%; max-width: 200vh; width: 100%;">
+      <div class="slideimg text-center d-inline-flex">
+        <img src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover"
+          style="width: 100%;  object-position :70% 70%;">
+        <img src="/image/sl-img2.jpg" alt="image-product" class="img-fluid object-fit-cover"
+          style="width: 100%;  object-position :50% 50%;">
+        <img src="/image/sl-img3.jpg" alt="image-product" class="img-fluid object-fit-cover"
+          style="width: 100%;  object-position :40% 40%;">
+        <img src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover"
+          style="width: 100%;  object-position :70% 70%;">
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!--main content-->
+  <section class="main container-sm mt-sm-5 mb-5 text-center" id="product-Container">
+    <!--Content left-->
+    <div class="row">
+      <div class="col-xl-2">
+        <div class="border-bottom border-secondary px-1">
+          <h1 class="fs-4 fw-semibold text-uppercase">detailed search</h1>
+          <div class="text-start fs-4 mb-2">
+            <div>
+              <input type="checkbox" name="text-checkbox" class="checkitem" value="T-shirt">
+              <label for="">T-shirt</label>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active fs-3" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <button class="btn text-info position-relative">
-                    <i class="bi bi-cart3 fs-2"></i>
-                    <span class="position-absolute fs-5 bg-danger border-dark text-center" style="width: 30px; border-radius: 100%; top: -2px; right:-8px;">8</span>
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button class="btn text-info position-relative">
-                    <i class="bi bi-heart fs-2"></i>
-                    <span class="position-absolute fs-5 bg-danger border-dark text-center" style="width: 30px; border-radius: 100%; top: -2px; right:-8px;">9+</span>
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button class="btn text-info position-relative">
-                    <i class="bi bi-chat-square fs-2"></i>
-                    <span class="position-absolute fs-5 bg-danger border-dark text-center" style="width: 30px; border-radius: 100%; top: -2px; right:-8px;">2</span>
-                  </button>
-                </li>
-                <li class="nav-item dropdown position-relative">
-                  <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    login
-                  </a>
-                  <ul class="dropdown-menu ">
-                    <li><a class="dropdown-item" href="#">profile</a></li>
-                    <li><a class="dropdown-item" href="#">product</a></li>
-                    <li><a class="dropdown-item" href="#">Buy</a></li>
-                    <li><a class="dropdown-item" href="#">address</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Setting</a></li>
-                    <li><a class="dropdown-item" href="#">logout</a></li>
-                  </ul>
-                </li>
-              </ul>          
+            <div>
+              <input type="checkbox" name="text-checkbox" class="checkitem" value="Shirt">
+              <label for="">Shirt</label>
             </div>
           </div>
         </div>
-      </nav>
-      <!--image slide-->
-      <section>
-        <div class="containerimg" style="max-height: 92vh; height: 100%; max-width: 200vh; width: 100%;">
-            <div class="slideimg text-center d-inline-flex">
-            <img  src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :70% 70%;">
-            <img  src="/image/sl-img2.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :50% 50%;">
-            <img  src="/image/sl-img3.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :40% 40%;">
-            <img  src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover" style="width: 100%;  object-position :70% 70%;">
-      
-            
+        <!--select option 2-->
+        <div class="border-bottom border-secondary text-start fs-4 px-1">
+          <div>
+            <input type="checkbox" name="text-checkbox" class="checkitem" value="hoodie">
+            <label for="">Hoodie</label>
           </div>
+          <div>
+            <input type="checkbox" name="text-checkbox" class="checkitem" value="swater">
+            <label for="">Sweater</label>
+          </div>
+          <div>
+            <input type="checkbox" name="text-checkbox" class="checkitem" value="cap">
+            <label for="">Cap</label>
+          </div>
+
+        </div>
+      </div>
+      <!--Contant rigth-->
+      <div class="col-xl-10 text-center p-0 container-fluid">
+        <div class="row mx-0">
+          <!-- card product 01-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative"
+            style="height: 350px;" data-tags="T-shirt">
+            <img src="/image/srt215.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+              style="max-height: 350px; height: 100%;">
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              199.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp01()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4"></i>
+              </a>
+            </div>
+          </div>
+          <!-- card product 02-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+            <img src="/image/srt556.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+              style="max-height: 350px; height: 100%;">
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              399.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2 " onclick="openPopUp02()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+          <!-- card product 03-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative"
+            style="height:350px;" data-tags="cap">
             
+              <img src="/image/cap01.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+           
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              550.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp03()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+          <!-- card product 04-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="cap">
             
+              <img src="/image/cap02.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+           
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              <s>899.00 ฿</s> 329.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp04()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+          <!-- card product 05-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="swater">
+
+              <img src="/image/oeiiw6.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              650.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp05()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+          <!-- card product 06-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+              <img src="/image/srtm012.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              199.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp06()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+          <!-- card product 07-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+            
+              <img src="/image/sdpq668.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+            
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              <s>599.00 ฿</s> 499.00 ฿ 
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp07()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 08-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="Shirt">
+            
+              <img src="/image/utie3.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+         
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              279.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp08()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 09-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="Shirt">
+            
+              <img src="/image/srt89.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+          
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              199.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp09()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 10-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+            
+              <img src="/image/med833.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+            
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              129.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp10()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 11-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+            
+              <img src="/image/syj65.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+            
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              359.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp11()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 12-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="hoodie">
+            
+              <img src="/image/weqwe77.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+            
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              1,850.0 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp12()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 13-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+           
+              <img src="/image/ts7239.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+           
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+             <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              <s>299.00 ฿</s> 99.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp13()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 14-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+           
+              <img src="/image/lui65.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+            </a>
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              229.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp14()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 15-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="swater">
+            
+              <img src="/image/mds996.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover"
+                alt="Hdm#225" style="max-height: 350px; height: 100%;">
+            
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              499.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp15()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- card product 16-->
+          <div class="productAll container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative "
+            style="height:350px;" data-tags="T-shirt">
+            
+              <img src="/image/tit96.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225"
+                style="max-height: 350px; height: 100%;">
+           
+            <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
+              <i class="bi bi-heart-fill fs-2"></i>
+            </button>
+            <p class="price-product">
+              189.00 ฿
+            </p>
+            <div class="position-absolute bottom-0 mx-2 mb-2" onclick="openPopUp16()">
+              <button class="btnAdc d-none d-md-block d-lg-block">
+                <span>Details</span>
+              </button>
+              <a class="btn btn-primary d-block d-md-none d-lg-none">
+                <i class="bi bi-cart3 me-1 fs-4 "></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- popup item -->
+  <!-- Product 01 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem1">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Details item</h1>
+        <div>
+          <img src="/image/srt215.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Kitty Shirt (male)</h1>
+        <h2 class="fs-5 text-danger">Total sold 52</h2>
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>199.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id=""> 
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
         
-      </section>
-
-      <!--main content-->
-      <section class="main container-sm mt-sm-5 mb-5 text-center">
-            <!--Content left-->
-            <div class="row">
-              <div class="col-xl-2">
-                <div class="border-bottom border-secondary px-1">
-                  <h1 class="fs-4 fw-semibold text-uppercase">detailed search</h1>
-                  <div class="text-start fs-5 mb-2">
-                    <div class="">
-                      <input type="checkbox" id="cehck" name="text-checkbox">
-                      <label for="sometext">Male</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="cehck" name="text-checkbox">
-                      <label for="sometext">Female</label>
-                    </div>        
-                  </div>            
-                </div>
-                <!--select option 2-->
-                <div class="border-bottom border-secondary text-start fs-4 px-1">
-                  <div>
-                    <input type="checkbox" id="cehck" name="text-checkbox">
-                    <label for="sometext">hoodie</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="cehck" name="text-checkbox">
-                    <label for="sometext">sweater</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" id="cehck" name="text-checkbox">
-                    <label for="sometext">cap</label>
-                  </div>
-                  
-                </div>
-              </div>  
-            <!--Contant rigth-->
-              <div class="col-xl-10 text-center p-0 container-fluid">
-                <div class="row mx-0">
-                  <!-- card product 01-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/srt215.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                      455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2"  onclick="openPopUp()">
-                      <button href="" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </button>
-                      <a class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 02-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/srt556.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                      455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 01-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/cap01.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                     1850$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 04-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/cap02.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                      <s>480$</s> 455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/oeiiw6.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/srtm012.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/sdpq668.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/utie3.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/srt89.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/med833.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/syj65.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/weqwe77.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/ts7239.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/lui65.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/mds996.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-
-                  <!-- card product 05-->
-                  <div class="container-sm col-6  col-md-4 col-xl-3 px-1 my-1 overflow-hidden position-relative ">
-                    <a href="#">
-                      <img src="/image/tit96.jpg" class="card-img-top border rounded-2 img-fluid object-fit-cover" alt="Hdm#225" style="max-height: 350px; height: 100%;">
-                    </a>
-                    <button class="button-heart btn position-absolute bottom-0 " style="right: 10px;" id="product-like">
-                      <a href="#"><i class="bi bi-heart-fill fs-2"></i></a>
-                    </button>
-                    <p class="price-product">
-                    455$
-                    </p>
-                    <div class="position-absolute bottom-0 mx-2 mb-2">
-                      <a href="#" class="btn btn-primary d-none d-md-block d-lg-block">
-                        Add to chart
-                      </a>
-                      <a href="#" class="btn btn-primary d-block d-md-none d-lg-none">
-                        <i class="bi bi-cart3 me-1 fs-4 "></i>
-                      </a>    
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>    
-      </section>
-
-      <!--popup item-->
-      <section class="alart-item container text-center justify-content-center mx-auto start-50 translate-middle" id="popup">
-        <div class="popup-product row ">
-          <div class="col-md-6 p-5 text-center justify-content-center">
-              <p class="fs-3">Product item</p>
-              <div>
-                <img src="/image/hdm225.jpg" alt="product" class="img-fluid object-fit-cover" width="250" height="250">
-              </div>
-              <p class="fs-5">supply <span>6</span></p>
-          </div>
-          <div class="dtipu col-md-6 p-5">
-              <p class="fs-3">Detail item</p>
-              <p class="text-start fs-3">hoodie male <span class="fs-5 text-danger">total sold 52</span></p>
-              <div class="text-start d-flex fs-5">
-                <p class="">455 $</p>
-                <p class="ms-3">delivery</p>
-                <div class="ms-3">
-                  <select name="select-delivery" id="">
-                    <option value="kerry">kerry</option>
-                    <option value="flash">flash</option>
-                    <option value="Ningha">Ningha</option>
-                  </select>
-                </div>
-              </div> 
-              <div class="row gap-1">
-                <div class="col text-start d-flex gap-1 "> 
-                    <button class="buttnchos btn text-light border-light" id="btnsplc1">S</button>
-                    <button class="buttnchos btn text-light border-light" id="btnsplc2">L</button>
-                    <button class="buttnchos btn text-light border-light" id="btnsplc3">M</button>
-                    <button class="buttnchos btn text-light border-light" id="btnsplc4">XL</button> 
-                </div>
-                <div class="col">
-                  <div class="bcp">
-                    <button class="btn">add to cart</button>
-                  </div>
-                </div>
-                <div class="col">
-                  <!--button close popup-->
-                  <div class="bcp">
-                    <button class="btn" onclick="ClosepopUp()">
-                      continue shopping
-                    </button>
-                  </div>
-                </div>
-              </div>
-          </div>
-
+      </div>
+  </section>
+  <!-- Product 02 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem2">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <p class="fs-3">Product item</p>
+        <div>
+          <img src="/image/srt556.jpg" alt="product" class="object-fit-cover" width="250" height="350">
         </div>
-      </section>
-
-      
-
-     <!--Footer content -->
-      <section class="footer container-fluid bg-dark">
-          <footer class="row align-items-start text-center py-5 mx-5">
-            <div class="footer-frist col-sm-4 align-items-center justify-content-center d-grid text-white">
-              <div class="">
-                <i class="bi bi-person-bounding-box fs-5"><span class="fs-5 text-uppercase"> support center</span></i>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light">Black Con shrit (Male)</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p class="">399.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
               </div>
-              <ul class="list-unstyled text-start">
-                <li class=""><a href="#"><p>policy</p></a></li>
-                <li class=""><a href="#"><p>suport</p></a></li>
-                <li class=""><a href="#"><p>return product</p></a></li>
-                <li class=""><a href="#"><p>contract</p></a></li>
-               
-              </ul>
             </div>
-
-            <div class="col-sm-4 d-inline-flex justify-content-center row">
-              <div class="text-light">
-                <p class="fs-4">payment</p>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
               </div>
-              <ul class="payment-list container-fluid text-light row list-unstyled text-center align-items-start">
-                <li class="col-6 col-xl-4">
-                  <img src="/image/visa-logo-800x450.jpg" alt="visa-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/Mastercard_logo.jpg" alt="mastercard-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/ksu.png" alt="ksu-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/Krung_Thai_Bank_logo.svg.png" alt="krungthai-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/trummoney.png" alt="visa-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/Paypal-logo.png" alt="visa-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/bitcoin.png" alt="visa-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/Shopee-Logo.svg" alt="visa-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/2560px-Lazada_(2019).svg.png" alt="visa-logo">
-                </li>
-                <li class="col-6 col-xl-4">
-                  <img src="/image/steampowered-ar21.png" alt="steam-logo">
-                </li>
-              </ul>
             </div>
-            <div class="col-sm-4 d-inline-flex justify-content-center align-items-start">
-              <ul class="d-flex gap-3 list-unstyled">
-                <li class="fs-4">
-                  <a href="#"><i class="bi bi-facebook"></i></a> 
-                </li>
-                <li class="fs-4">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                </li>
-                <li class="fs-4">
-                  <a href="#"><i class="bi bi-youtube"></i></a>   
-                </li>
-              </ul>
-            </div>
-          </footer>
+          </div>
+        </div>
         
+      </div>
+  </section>
+  <!-- Product 03 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem3">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <p class="fs-3">Product item</p>
+        <div>
+          <img src="/image/cap01.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Cap cap</h1>
+        <h2 class="fs-5 text-danger">Total sold 32</h2>
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p class="">550.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 04 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem4">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/cap02.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Blue caps</h1>
+        <h2 class="fs-5 text-danger">Total sold 6</h2>
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p><s class="text-danger">899.00 ฿</s> 329.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 05 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem5">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/oeiiw6.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Sweater white(Female)</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>     
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>650.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">kerry</option>
+              <option value="flash">flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 06 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem6">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/srtm012.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>3</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light">White shrit (Male)</h1>
+        <h2 class="fs-5 text-danger">Total sold 15</h2>      
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>199.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 07 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem7">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/sdpq668.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Inio (Female)</h1>
+        <h2 class="fs-5 text-danger">Total sold 85</h2>  
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p><s class="text-danger">599.00 ฿</s> 499.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 08 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem8">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/utie3.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Son hyun min(Male)</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>    
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>279.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 09 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem9">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/srt89.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">White shirt v2</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>      
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>199.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 10 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem10">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/med833.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Unicon Ops</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>  
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>129.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 11 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem11">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/syj65.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Yukagata</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>359.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">kerry</option>
+              <option value="flash">flash</option>
+              <option value="Ningha">Ningha</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 12 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem12">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/weqwe77.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Hoddie White</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>    
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>1,850.0 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 13 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem13">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/ts7239.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Red Shirt</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>   
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p><s class="text-danger">299.00 ฿</s> 99.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">Kerry</option>
+              <option value="flash">Flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 14 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem14">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/lui65.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Black box shirt</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>  
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>229.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">kerry</option>
+              <option value="flash">flash</option>
+              <option value="Ningha">Ningha</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 15 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem15">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/mds996.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Bee tailing</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>499.00 ฿</p>
+          <p class="ms-3">Delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">kerry</option>
+              <option value="flash">flash</option>
+              <option value="Ningha">Ninja van</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  <!-- Product 16 -->
+  <section class="popup-item container text-center justify-content-center start-50 mx-auto translate-middle"
+    id="popupItem16">
+    <div class="popup-product row">
+      <div class="col-md-6 p-5 text-center justify-content-center">
+        <h1 class="fs-3">Product item</h1>
+        <div>
+          <img src="/image/tit96.jpg" alt="product" class="object-fit-cover" width="250" height="350">
+        </div>
+        <h1 class="fs-5 text-uppercase">supply <span>6</span></h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere saepe ratione, delectus beatae ipsa voluptatibus porro incidunt, tempora neque eos dicta expedita aut quis iusto voluptatem laboriosam eveniet sequi ut?</p>
+      </div>
+      <div class="dtipu col-md-6 p-5">
+        <h1 class="fs-3 text-light text-uppercase">Big white shirt</h1>
+        <h2 class="fs-5 text-danger">Total sold 142</h2>  
+        <div class="text-center d-flex fs-3 align-items-center">
+          <p>189.00 ฿</p>
+          <p class="ms-3">delivery</p>
+          <div class="ms-3 fs-5">
+            <select name="select-delivery" id="">
+              <option value="kerry">kerry</option>
+              <option value="flash">flash</option>
+              <option value="Ningha">Ningha</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gap-1">
+          <div class="col-sm text-center d-flex gap-1 me-1 overflow-auto">
+            <select name="select-delivery" id="">
+              <option value="kerry">S</option>
+              <option value="flash">M</option>
+              <option value="Ningha">L</option>
+              <option value="Ningha">XL</option>
+              <option value="Ningha">XXL</option>
+            </select>
+            <div class="col-sm">
+              <div class="bcp">
+                <button class="addButton btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-sm">
+              <!--button close popup-->
+              <div class="bcp">
+                <button class="btn" onclick="ClosepopUp()">
+                  close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </section>
+  
+  <!--Footer content -->
+  <section class="footer container-fluid bg-dark">
+    <footer class="row align-items-start text-center py-5 mx-5">
+      <div class="footer-frist col-sm-4 align-items-center justify-content-center d-grid text-white">
+        <div class="">
+          <i class="bi bi-person-bounding-box fs-5"><span class="fs-5 text-uppercase"> support center</span></i>
+        </div>
+        <ul class="list-unstyled text-start">
+          <li class=""><a href="#">
+              <p>Policy</p>
+            </a></li>
+          <li class=""><a href="#">
+              <p>Suport</p>
+            </a></li>
+          <li class=""><a href="#">
+              <p>Return product</p>
+            </a></li>
+          <li class=""><a href="#">
+              <p>Contract</p>
+            </a></li>
 
-      </section>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/app.js"> </script>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 d-inline-flex justify-content-center row">
+        <div class="text-light">
+          <p class="fs-4">Payment</p>
+        </div>
+        <ul class="payment-list container-fluid text-light row list-unstyled text-center align-items-start">
+          <li class="col-6 col-xl-4">
+            <img src="/image/visa-logo-800x450.jpg" alt="visa-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/Mastercard_logo.jpg" alt="mastercard-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/ksu.png" alt="ksu-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/Krung_Thai_Bank_logo.svg.png" alt="krungthai-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/trummoney.png" alt="visa-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/Paypal-logo.png" alt="visa-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/bitcoin.png" alt="visa-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/Shopee-Logo.svg" alt="visa-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/2560px-Lazada_(2019).svg.png" alt="visa-logo">
+          </li>
+          <li class="col-6 col-xl-4">
+            <img src="/image/steampowered-ar21.png" alt="steam-logo">
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 d-inline-flex justify-content-center align-items-start">
+        <ul class="d-flex gap-3 list-unstyled">
+          <li class="fs-4">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="fs-4">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li class="fs-4">
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="/app.js"> </script>
 </body>
 </html>
-
-
-
-

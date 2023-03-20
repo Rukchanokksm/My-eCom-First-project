@@ -18,6 +18,9 @@ h1 {
     --hoverheart:#FF4088;
     --buttoncolor:#F6224C;
     --textcolor:#ECECEC;
+    --backgroundpopup:#EFEFEF;
+    --btnaddtocart:#3B3E40;
+    --currentbtnheart:#FFC4FD;
 }
 
 
@@ -83,23 +86,73 @@ h1 {
 }
 
 
+/*seach cecheck box*/
+.seach-cecheck-box {
+  position: absolute;
+  visibility: hidden;
+}
+
+/*Button Add to cart*/
+.btnAdc {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--btnaddtocart);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 4px;
+  width: 85px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ }
+ 
+ .btnAdc span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: 500;
+ }
+ 
+ .btnAdc span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ .btnAdc:hover span {
+  padding-right: 15px;
+ }
+ 
+ .btnAdc:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
+
 /*button heat*/
 .button-heart i{
-  color: #FCADCB;
+  color: var(--currentbtnheart);
 }
 .button-heart i:hover{
   color: var(--hoverheart);
   transition: all 0.5s;
 }
 
+
 /*price-product*/
 .price-product{
   position: absolute;
   color: #101010;
-  background-color: #78FABD;
+  background-color: #F55454;
   top: 10px;
-  left:5%;
-  width: 60px;
+  padding: 5px;
+  width: auto;
   font-weight: 600;
   font-size: 1.3rem;
 }
@@ -159,23 +212,31 @@ section.footer li i:hover {
 
 
 /*alart-item*/
-.alart-item {
-  color: #101010;
-  top: 55%;
+.popup-item {
+  top: 50%;
   z-index: 10;
-  background-color: #EFEFEF;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   visibility: hidden;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   overflow: auto;
 }
 
+.popup-product{
+  background-color: var(--backgroundpopup);
+  color: #101010;
+  top: 25vh;
+  min-height: 50vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #101010;
+}
 
 .dtipu {
   background-color: #323232;
 }
 .dtipu p {
-  color: #EFEFEF;
+  color: var(--backgroundpopup);
 }
 
 /*add image*/

@@ -1,65 +1,126 @@
-let PopoUp = document.getElementById("popup");
+//Filter Product
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const objectProduct = document.querySelectorAll('#product-Container .productAll');
 
-function openPopUp(){
-    PopoUp.classList.add("popupitem");
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    let checkedTags = Array.from(checkboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+
+    objectProduct.forEach((objectItem) => {
+      let objectTag = objectItem.getAttribute("data-tags");
+      let productTag = objectTag ? objectTag.split(' ') : [];
+      if (checkedTags.every((tag) => productTag.includes(tag))) {
+        objectItem.style.display = '';
+      } else {
+        objectItem.style.display = 'none';
+      }
+    });
+  });
+});
+
+
+//popup script
+let popUp = [document.getElementById('popupItem1'),document.getElementById('popupItem2'),document.getElementById('popupItem3'),document.getElementById('popupItem4')
+,document.getElementById('popupItem5'),document.getElementById('popupItem6'),document.getElementById('popupItem7'),document.getElementById('popupItem8')
+,document.getElementById('popupItem9'),document.getElementById('popupItem10'),document.getElementById('popupItem11'),document.getElementById('popupItem12')
+,document.getElementById('popupItem13'),document.getElementById('popupItem14'),document.getElementById('popupItem15'),document.getElementById('popupItem16')];
+// let popUp = [];
+// for (let i = 1; i <= 16; i++) {
+//   popUp.push(document.getElementById(`popupItem${i}`));
+// }
+
+function openPopUp01(){
+    popUp[0].classList.add("popupitem");
 }
+function openPopUp02(){
+    popUp[1].classList.add("popupitem");
+}
+function openPopUp03(){
+    popUp[2].classList.add("popupitem");
+}
+function openPopUp04(){
+    popUp[3].classList.add("popupitem");
+}
+function openPopUp05(){
+    popUp[4].classList.add("popupitem");
+}
+function openPopUp06(){
+    popUp[5].classList.add("popupitem");
+}
+function openPopUp07(){
+    popUp[6].classList.add("popupitem");
+}
+function openPopUp08(){
+    popUp[7].classList.add("popupitem");
+}
+function openPopUp09(){
+    popUp[8].classList.add("popupitem");
+}
+function openPopUp10(){
+    popUp[9].classList.add("popupitem");
+}
+function openPopUp11(){
+    popUp[10].classList.add("popupitem");
+}
+function openPopUp12(){
+    popUp[11].classList.add("popupitem");
+}
+function openPopUp13(){
+    popUp[12].classList.add("popupitem");
+}
+function openPopUp14(){
+    popUp[13].classList.add("popupitem");
+}
+function openPopUp15(){
+    popUp[14].classList.add("popupitem");
+}
+function openPopUp16(){
+    popUp[15].classList.add("popupitem");
+}
+
 function ClosepopUp() {
-    PopoUp.classList.remove("popupitem");
-}
-
-//button select size
-// const activeSize = document.getElementById("btnsplc");
-// activeSize.forEach(btnslec => {
-//     btnslec.addEventListener('click',() => {
-//         document.querySelector('.btslsize').classList.remove('btslsize');
-//         btnslec.classList.add("btslsize");
-//     });
-// });
-const button1 = document.getElementById('btnsplc1');
-const button2 = document.getElementById('btnsplc2');
-const button3 = document.getElementById('btnsplc3');
-const button4 = document.getElementById('btnsplc4');
-
-button1.addEventListener('click', () => {
-  if (!button1.classList.contains('clicked')) {
-    button1.classList.add('clicked');
-    button2.classList.remove('clicked');
-    button3.classList.remove('clicked');
-    button4.classList.remove('clicked');
-  } else {
-    button1.classList.remove('clicked');
+  for (let i = 0; i < popUp.length; i++) {
+    popUp[i].classList.remove("popupitem");
   }
+};
+
+// heart item
+// get all the buttons using a query selector
+const buttons = document.querySelectorAll('.button-heart i');
+// define the original color and the new color
+const originalColor = buttons[0].style.color;
+const newColor = 'var(--hoverheart)';
+let inCrees = 0 ;
+// add a click event listener to each button
+buttons.forEach((button) =>{
+  // define a variable to keep track of the current color
+  let currentColor = originalColor;
+  button.addEventListener('click', () =>{
+    // check the current color and change it to the new color if it is the original color,
+    // or change it back to the original color if it is the new color
+    if (currentColor === originalColor) {
+      inCrees += 1;
+      document.getElementById('countLike').innerHTML=inCrees;
+      button.style.color = newColor;
+      currentColor = newColor;
+    } else {
+      inCrees -= 1;
+      document.getElementById('countLike').innerHTML=inCrees;
+      button.style.color = originalColor;
+      currentColor = originalColor;
+    }
+  });
 });
 
-button2.addEventListener('click', () => {
-  if (!button2.classList.contains('clicked')) {
-    button2.classList.add('clicked');
-    button1.classList.remove('clicked');
-    button3.classList.remove('clicked');
-    button4.classList.remove('clicked');
-  } else {
-    button2.classList.remove('clicked');
-  }
-});
+//Add product
+const addBtnitem = document.querySelectorAll('.addButton');
+let countPd = 0;
 
-button3.addEventListener('click', () => {
-  if (!button3.classList.contains('clicked')) {
-    button3.classList.add('clicked');
-    button1.classList.remove('clicked');
-    button2.classList.remove('clicked');
-    button4.classList.remove('clicked');
-  } else {
-    button3.classList.remove('clicked');
-  }
-});
-
-button4.addEventListener('click', () => {
-  if (!button4.classList.contains('clicked')) {
-    button4.classList.add('clicked');
-    button1.classList.remove('clicked');
-    button2.classList.remove('clicked');
-    button3.classList.remove('clicked');
-  } else {
-    button4.classList.remove('clicked');
-  }
-});
+addBtnitem.forEach((clickAdd) =>{
+  clickAdd.addEventListener('click', () =>{
+    countPd += 1;
+    document.getElementById('countProduct').innerHTML = countPd;
+  })
+})
