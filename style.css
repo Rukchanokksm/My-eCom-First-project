@@ -283,3 +283,70 @@ section.footer li i:hover {
 .popupitem{
   visibility: visible;
 }
+/* Slide show item count */
+.showItemCount  {
+  /* visibility: hidden; */
+  visibility: visible;
+}
+.showItemCount div{
+  background-color: var(--btnaddtocart);
+  width: 400px; 
+  height: 100vh; 
+  z-index: 55; 
+  top: 10%;
+}
+@media screen and (max-width: 990px) {
+  .showItemCount div{
+    max-width: 900px;
+    width: 100%;
+    z-index: 52; 
+  }
+}
+
+/* header top bar */
+.hdtb {
+  border-bottom:2px solid white;
+  font-weight: 600;
+}
+
+/* text alert show in slide item count */
+.txsd {
+  margin-top: 0;
+  font-weight: 600;
+  display: block;
+}
+
+.showItemInchart01 {
+  display: flex;
+}
+/* Button shop */
+/* .btnShopnow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+.btnShopnow:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.btnShopnow:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.btnShopnow:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+} */

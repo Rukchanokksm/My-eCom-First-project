@@ -16,7 +16,7 @@
 <body>
   <!--top navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Offcanvas navbar large"
-    style="height: 10vh; font-weight: 500;">
+    style="height: 10vh; font-weight: 500; z-index: 54;">
     <div class="container-fluid px-5">
       <a href="#"><img src="/image/logo-free.jpg" alt="logo-nav" style="max-width: 80px; width: 100%;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
@@ -38,7 +38,7 @@
               <a class="nav-link active fs-3" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <button class="btn text-light position-relative">
+              <button class="btn text-light position-relative" onclick="btnCountItem()">
                 <i class="bi bi-cart3 fs-2"></i>
                 <span class="position-absolute fs-5 bg-secondary border-dark text-center"
                   style="width: 30px; border-radius: 100%; top: -2px; right:-8px;" id="countProduct">0</span>
@@ -75,7 +75,7 @@
   </nav>
   <!--image slide-->
   <section>
-    <div class="containerimg" style="max-height: 92vh; height: 100%; max-width: 200vh; width: 100%;">
+    <div class="containerimg" style="max-height: 92vh; height: 100%; max-width: 205vh; width: 100%;">
       <div class="slideimg text-center d-inline-flex">
         <img src="/image/sl-img1.jpg" alt="image-product" class="img-fluid object-fit-cover"
           style="width: 100%;  object-position :70% 70%;">
@@ -91,9 +91,207 @@
 
 
     </div>
-
+    
   </section>
-
+  
+  <!-- Slide Show item -->
+  <section class="showItemCount position-absolute d-inline-flex justify-content-end" id="Tysds">
+    <div class="position-fixed container overflow-auto d-flex flex-column" style="right: 0;">
+      <p class="hdtb text-light mt-2 pb-2 text-uppercase">My Item</p> 
+        <p class="txsd text-light text-center align-top">
+          emty item
+        </p>
+        <!-- product 1-->
+        <div class="showItemInchart01 flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/srt215.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>     
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>     
+        </div>
+        <!-- product 2-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/srt556.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div> 
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div> 
+        </div>
+        <!-- product 3-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/cap01.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>     
+            <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div> 
+        </div>
+        <!-- product 4-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/cap02.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>  
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>    
+        </div>
+        <!-- product 5-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/oeiiw6.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>   
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>   
+        </div>
+        <!-- product 6-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/srtm012.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>  
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>    
+        </div>
+        <!-- product 7-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/sdpq668.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>   
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>   
+        </div>
+        <!-- product 8-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/utie3.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>   
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>   
+        </div>
+        <!-- product 9-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/srt89.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div> 
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>     
+        </div>
+        <!-- product 10-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/med833.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>  
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>    
+        </div>
+        <!-- product 11-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/srt215.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>   
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>   
+        </div>
+        <!-- product 12-->
+        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+            <img class="img-fluid p-1 me-2" src="/image/srt215.jpg" alt="" width="90px" height="60px">
+          <div class="text-light">
+            <p>Cap</p>
+            <p>Size S</p>
+          </div>     
+          <div class="text-light">            
+            <p class="align-bottom">1</p> 
+            <p class="align-bottom">199 .-</p> 
+          </div>  
+          <div class="text-light">        
+            <i class="bi bi-trash3"></i>
+          </div>    
+        </div>
+        
+        <!-- total price -->
+        <div class="d-flex flex-coloumn text-center text-light">
+          <p class="me-5">Total price</p>
+          <p class="me-5" id="totalPrice">0</p>
+          <p>Bath</p>
+        </div>
+          
+ 
+    </div>
+  </section>
   <!--main content-->
   <section class="main container-sm mt-sm-5 mb-5 text-center" id="product-Container">
     <!--Content left-->
@@ -530,7 +728,7 @@
             </select>
             <div class="col-sm">
               <div class="bcp">
-                <button class="addButton btn">Add to cart</button>
+                <button class="addButton btn" id="addItem01">Add to cart</button>
               </div>
             </div>
             <div class="col-sm">

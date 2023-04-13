@@ -123,4 +123,25 @@ addBtnitem.forEach((clickAdd) =>{
     countPd += 1;
     document.getElementById('countProduct').innerHTML = countPd;
   })
-})
+});
+
+
+// Show count Item
+
+// const countAllitem = document.getElementById('Tysds');
+// function btnCountItem(){
+
+//   countAllitem.classList.add("sItemCount")
+// };
+
+function btnCountItem() {
+  let countAllitem = document.getElementById('Tysds');
+  if (countAllitem.style.visibility === "hidden" ) {
+    countAllitem.style.visibility = "visible";
+  } else {
+    countAllitem.style.visibility = "hidden"
+  }
+}
+
+// total price sumery
+document.getElementById('totalPrice').innerHTML = 0 + 199 +".00";
