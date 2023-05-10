@@ -98,11 +98,11 @@
   <section class="showItemCount position-absolute d-inline-flex justify-content-end" id="Tysds">
     <div class="position-fixed container overflow-auto d-flex flex-column" style="right: 0;">
       <p class="hdtb text-light mt-2 pb-2 text-uppercase">My Item</p> 
-        <p class="txsd text-light text-center align-top">
+        <!-- <p class="txsd text-light text-center align-top">
           emty item
-        </p>
+        </p> -->
         <!-- product 1-->
-        <div class="showItemInchart01 flex-coloumn" style="top: 0px; height: 80px;">   
+        <div class="showItemInchart01 flex-coloumn" style="top: 0px; height: 80px;" id="sItem01">   
             <img class="img-fluid p-1 me-2" src="/image/srt215.jpg" alt="" width="90px" height="60px">
           <div class="text-light">
             <p>Cap</p>
@@ -112,12 +112,12 @@
             <p class="align-bottom">1</p> 
             <p class="align-bottom">199 .-</p> 
           </div>     
-          <div class="text-light">        
-            <i class="bi bi-trash3"></i>
+          <div>        
+            <i class="ReBtn btn bi bi-trash3 text-light" id="dlim01"></i>
           </div>     
         </div>
         <!-- product 2-->
-        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+        <div class="showItemInchart02 flex-coloumn" style="top: 0px; height: 80px;" id="sItem02">   
             <img class="img-fluid p-1 me-2" src="/image/srt556.jpg" alt="" width="90px" height="60px">
           <div class="text-light">
             <p>Cap</p>
@@ -127,12 +127,12 @@
             <p class="align-bottom">1</p> 
             <p class="align-bottom">199 .-</p> 
           </div> 
-          <div class="text-light">        
-            <i class="bi bi-trash3"></i>
+          <div>        
+            <i class="ReBtn btn bi bi-trash3 text-light" id="dlim02"></i>
           </div> 
         </div>
         <!-- product 3-->
-        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+        <div class="showItemInchart03 flex-coloumn" style="top: 0px; height: 80px;" id="sItem03">   
             <img class="img-fluid p-1 me-2" src="/image/cap01.jpg" alt="" width="90px" height="60px">
           <div class="text-light">
             <p>Cap</p>
@@ -142,12 +142,12 @@
             <p class="align-bottom">1</p> 
             <p class="align-bottom">199 .-</p> 
           </div>     
-            <div class="text-light">        
-            <i class="bi bi-trash3"></i>
+            <div>        
+            <i class="ReBtn btn bi bi-trash3 text-light"></i>
           </div> 
         </div>
         <!-- product 4-->
-        <div class="showItemInchart02 d-flex flex-coloumn" style="top: 0px; height: 80px;">   
+        <div class="showItemInchart04 flex-coloumn" style="top: 0px; height: 80px;" id="sItem04">   
             <img class="img-fluid p-1 me-2" src="/image/cap02.jpg" alt="" width="90px" height="60px">
           <div class="text-light">
             <p>Cap</p>
@@ -157,8 +157,8 @@
             <p class="align-bottom">1</p> 
             <p class="align-bottom">199 .-</p> 
           </div>  
-          <div class="text-light">        
-            <i class="bi bi-trash3"></i>
+          <div>        
+            <i class="ReBtn btn bi bi-trash3 text-light"></i>
           </div>    
         </div>
         <!-- product 5-->
@@ -781,7 +781,7 @@
             </select>
             <div class="col-sm">
               <div class="bcp">
-                <button class="addButton btn">Add to cart</button>
+                <button class="addButton btn" id="addItem02">Add to cart</button>
               </div>
             </div>
             <div class="col-sm">
@@ -834,7 +834,7 @@
             </select>
             <div class="col-sm">
               <div class="bcp">
-                <button class="addButton btn">Add to cart</button>
+                <button class="addButton btn" id="addItem03">Add to cart</button>
               </div>
             </div>
             <div class="col-sm">

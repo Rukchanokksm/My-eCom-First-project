@@ -124,8 +124,14 @@ addBtnitem.forEach((clickAdd) =>{
     document.getElementById('countProduct').innerHTML = countPd;
   })
 });
-
-
+//remove product
+const reBtnitem = document.querySelectorAll('.ReBtn')
+reBtnitem.forEach((clickAdd) =>{
+  clickAdd.addEventListener('click', () =>{
+    countPd -= 1;
+    document.getElementById('countProduct').innerHTML = countPd;
+  })
+});
 // Show count Item
 
 // const countAllitem = document.getElementById('Tysds');
@@ -142,6 +148,46 @@ function btnCountItem() {
     countAllitem.style.visibility = "hidden"
   }
 }
+//add item
+
+let addItemcart01 = document.getElementById('addItem01');
+let sItem01 = document.getElementById('sItem01')
+addItemcart01.addEventListener('click', () =>{
+  sItem01.style.display = "flex" ;
+
+})
+
+let addItemcart02 = document.getElementById('addItem02');
+let sItem02 = document.getElementById('sItem02')
+addItemcart02.addEventListener('click', () =>{
+  sItem02.style.display = "flex" ;
+})
+
+let addItemcart03 = document.getElementById('addItem03');
+let sItem03 = document.getElementById('sItem03')
+addItemcart03.addEventListener('click', () =>{
+  sItem03.style.display = "flex" ;
+})
+
+//remove item
+let deleteItem01 = document.getElementById('dlim01');
+deleteItem01.addEventListener('click', () =>{
+  sItem01.style.display = "none" ;
+})
+
+let deleteItem02 = document.getElementById('dlim02');
+deleteItem02.addEventListener('click', () =>{
+  sItem02.style.display = "none" ;
+})
+let deleteItem03 = document.getElementById('dlim01');
+deleteItem03.addEventListener('click', () =>{
+  sItem03.style.display = "none" ;
+})
+
+let deleteItem04 = document.getElementById('dlim02');
+deleteItem04.addEventListener('click', () =>{
+  sItem04.style.display = "none" ;
+})
 
 // total price sumery
-document.getElementById('totalPrice').innerHTML = 0 + 199 +".00";
+document.getElementById('totalPrice').innerHTML = 0 + 0 +".00";

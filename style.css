@@ -317,7 +317,22 @@ section.footer li i:hover {
 }
 
 .showItemInchart01 {
-  display: flex;
+  display: none;
+}
+.showItemInchart02 {
+  display: none;
+}
+.showItemInchart03 {
+  display: none;
+}
+.showItemInchart04 {
+  display: none;
+}
+.showItemInchart05 {
+  display: none;
+}
+.showItemInchart06 {
+  display: none;
 }
 /* Button shop */
 /* .btnShopnow {
